@@ -1,0 +1,936 @@
+<!--
+%%[
+var @EmailName,@CampaignId,@EmailAddress,@SubscriberKey
+set @EmailName = emailname_
+set @CampaignId = ''
+set @EmailAddress = emailaddr
+set @SubscriberKey = _subscriberkey
+]%%
+-->
+
+<!DOCTYPE html> <!--V2.01.12.24-->
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="color-scheme:light dark;supported-color-schemes:light dark;">
+
+    <head>
+        <!--Help character display properly.-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--Set the initial scale of the email.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Force Outlook clients to render with a better MS engine.-->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <!--Help prevent blue links and autolinking-->
+        <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+        <!--prevent Apple from reformatting and zooming messages.-->
+        <meta name="x-apple-disable-message-reformatting">
+        <!--target dark mode-->
+        <meta name="color-scheme" content="light dark">
+        <meta name="supported-color-schemes" content="light dark only">
+
+        <!-- Allow for better image rendering on Windows hi-DPI displays. -->
+        <!--[if mso]>
+      <noscript>
+        <xml>
+          <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+              <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+          </xml>
+        </noscript>
+    <![endif]-->
+      
+        <!--to support dark mode meta tags-->
+        <style type="text/css">
+            :root {
+                 color-scheme: light dark;
+                 supported-color-schemes: light dark;
+            }
+        </style>
+
+        <!-- Common web font code -->
+        <style type="text/css">
+            @font-face {
+              font-family: 'STIX Two Text';
+              font-style: normal;
+              font-weight: 400;
+              mso-font-alt: 'Georgia';
+              src: url(https://fonts.gstatic.com/s/stixtwotext/v12/YA9Vr02F12Xkf5whdwKf11l0p76Mi93T_dE.woff2) format('woff2');
+            }
+            @font-face {
+              font-family: 'STIX Two Text';
+              font-style: italic;
+              font-weight: 400;
+             mso-font-alt: 'Georgia';
+              src: local ('STIX-Italic'), url(https://fonts.gstatic.com/s/stixtwotext/v12/YA9Lr02F12Xkf5whdwKf11l0p7u8idfU39NkYg.woff2) format('woff2');
+            } 
+            @font-face {
+              font-family: 'STIX Two Text';
+              font-style: normal;
+              font-weight: 500;
+              mso-font-alt: 'Georgia';
+            src: local ('STIX-Medium'),
+              src: url(https://fonts.gstatic.com/s/stixtwotext/v12/YA9Vr02F12Xkf5whdwKf11l0p76Mi93T_dE.woff2) format('woff2');
+            }
+            @font-face {
+              font-family: 'STIX Two Text';
+              font-style: normal;
+              font-weight: 600;
+            mso-font-alt: 'Georgia';
+            src: local ('STIX-Bold'),
+              src: url(https://fonts.gstatic.com/s/stixtwotext/v12/YA9Vr02F12Xkf5whdwKf11l0p76Mi93T_dE.woff2) format('woff2');
+            }
+        </style>
+
+        <!--[if (gte mso 9)|(IE)]><!-->
+        <style>
+            h2, h3, h4, p, a, span, img, ul, ol, li, img {
+             font-family: 'Arial', Helvetica, sans-serif !important;
+            } 
+        </style>
+
+        <style>
+            /*Web font over ride goes here
+             h1, h2, h3 { color: #000E57 !important; text-decoration: none !important; }  
+             p, a,  { color: #262524 !important; text-decoration: none !important; } */
+        </style>
+
+        <!--<![endif]-->
+
+        <style type="text/css">
+            .body-fix {
+                 height: 100% !important;
+                 margin: 0 auto !important;
+                 padding: 0 !important;
+                 width: 100% !important;
+                 -webkit-text-size-adjust: 100%;
+                 -ms-text-size-adjust: 100%;
+                 -webkit-font-smoothing: antialiased;
+                 word-spacing: normal;
+            }
+            
+            div[style*="margin:16px 0"] {
+                 margin: 0 !important;
+            }
+            
+            table, td {
+                 border-collapse: collapse !important;
+                 mso-table-lspace: 0pt;
+                 mso-table-rspace: 0pt;
+                 -webkit-text-size-adjust: 100%;
+                 -ms-text-size-adjust: 100%;
+            }
+            
+            img {
+                 border: 0;
+                 line-height: 100%;
+                 outline: none;
+                 text-decoration: none;
+                 display: block;
+            }
+            
+            p, h1, h2, h3 {
+                 padding: 0;
+                 margin: 0;
+            }
+            
+            a[x-apple-data-detectors] {
+                 color: inherit !important;
+                 text-decoration: none !important;
+                 font-size: inherit !important;
+                 font-family: inherit !important;
+                 font-weight: inherit !important;
+                 line-height: inherit !important;
+            }
+            
+            u+#body a {
+                 color: inherit;
+                 text-decoration: none;
+                 font-size: inherit;
+                 font-family: inherit;
+                 font-weight: inherit;
+                 line-height: inherit;
+            }
+            
+            #MessageViewBody a {
+                 color: inherit;
+                 text-decoration: none;
+                 font-size: inherit;
+                 font-family: inherit;
+                 font-weight: inherit;
+                 line-height: inherit;
+            }
+            
+            .link:hover { text-decoration: none !important; }
+                        
+               
+            .fadeimg:hover{
+                 transition:0.3s !important;
+                 opacity:0.5 !important;
+             }
+             
+            /* start CTA HOVER EFFECTS */
+             .cta { transition: 0.3s !important; }
+             .cta span { transition: 0.3s !important; }
+             .cta:hover{
+             	transition:0.5s !important;
+                 background-color:#000E57 !important;
+                 transform:scale(1.05);
+             }
+             .cta:hover span{transition:0.02s !important}
+             .cta-border:hover{border-bottom:1px solid transparent !important;}
+             
+             .cta-alt:hover{
+             	transition:0s !important;
+                 background-color:#0F3CFF !important;
+                 color:#FFFFFF !important;
+                 transform:scale(1.05);
+             }
+             .cta-alt:hover span{transition:0.02s !important}
+             .cta-alt-border:hover{border-bottom:1px solid transparent !important}
+              /* end CTA HOVER EFFECTS */
+             
+             .mobile { display: none; }
+             
+               /* start rating stars effect */
+             .star > a:hover{color:#000E57 !important}
+             .star > a:hover ~ a{color:#000E57 !important}
+             /* end rating stars effect */
+        </style>
+
+        <style>
+            /* styles to keep white text white in Gmail */
+            u + .body .gmail-screen { mix-blend-mode:normal; display: block; }
+            u + .body .gmail-difference { mix-blend-mode:normal; display: block; }
+            u + .body .cta:hover .gmail-screen { background: transparent; mix-blend-mode:normal; }
+            u + .body .cta:hover .gmail-difference { background: transparent; mix-blend-mode:normal; }
+        </style>
+
+        <!--mobile styles-->
+        <style>
+            @media screen and (max-width:600px) {
+                 .w60p { width: 60% !important; }
+                 .w90p { width: 90% !important; }
+                 .w95p { width: 95% !important; }
+                 .w100p { width: 100% !important; }
+                 .imgFull { width: 100% !important; height: auto !important; }
+                 .desktop { width: 0 !important; display: none !important; }
+                 .mobile { display: block !important; }
+            
+                 h1 { font-size: 32px !important; line-height: 42px !important; }
+                 .std { font-size: 18px !important; line-height: 28px !important; }
+                 .cTxt { text-align: center !important; }
+                 .tPad-0 { padding-top: 0 !important; }
+                 .rPad-0 { padding-right: 0 !important; }
+                 .lPad-0 { padding-left: 0 !important; }
+                 .bPad-30 { padding-bottom: 30px !important; }
+                 .star a { font-size: 40px !important; }
+            }
+        </style>
+
+        <!--dark mode styles-->
+        <style>
+            @media (prefers-color-scheme: dark) {
+                   /* Shows Dark Mode-Only Content, Like Images */
+                   .dark-img {
+                      display: block !important;
+                      width: auto !important;
+                      overflow: visible !important;
+                      float: none !important;
+                      max-height: inherit !important;
+                      max-width: inherit !important;
+                      line-height: auto !important;
+                      margin-top: 0px !important;
+                      visibility: inherit !important;
+                   }
+            
+            
+                   /* Hides Light Mode-Only Content, Like Images */
+                   .light-img { display: none; display: none !important; }
+            
+                   /* Custom Dark Mode Background Color */
+                   .darkmode { background-color: #100E11 !important; }
+                   .darkmode2 { background-color: #020203 !important; }
+                   .darkmode3 { background-color: #222023 !important; }
+            
+                   /* Custom Dark Mode Font Colors */
+                    p, span, a, ol, li { color: #fdfdfd !important; }
+                   h1, h2, h3 { color: #CCD1FF !important; }
+                   .white { color: #fdfdfd !important; }
+            
+                   /* Custom Dark Mode Text Link Color */
+                   .link  { color: #fdfdfd !important; }
+                   .footer a.link  { color: #fdfdfd !important; }
+               
+            } /* Copy dark mode styles for android support */
+                      /* Shows Dark Mode-Only Content, Like Images */
+                      [data-ogsc] .dark-img {
+               display: block !important;
+               width: auto !important;
+               overflow: visible !important;
+               float: none !important;
+               max-height: inherit !important;
+               max-width: inherit !important;
+               line-height: auto !important;
+               margin-top: 0px !important;
+               visibility: inherit !important;
+                      }
+            
+                     
+            /* Hides Light Mode-Only Content, Like Images */
+                      [data-ogsc] .light-img {
+                         display: none;
+                         display: none !important;
+                      }
+            
+                      /* Custom Dark Mode Background Color */
+                      [data-ogsc] .darkmode { background-color: #100E11 !important; }
+                      [data-ogsc] .darkmode2 { background-color: #020203 !important; }
+                      [data-ogsc] .darkmode3 { background-color: #222023 !important; }
+                                  
+                      /* Custom Dark Mode Font Colors */
+                      [data-ogsc] h1, [data-ogsc] h3, [data-ogsc] h2 { color: #CCD1FF !important; }
+                      [data-ogsc] span, [data-ogsc] a, data-ogsc] p, data-ogsc] ol, data-ogsc] l1 { color: #028383 !important; }
+                      [data-ogsc] .white { color: #fdfdfd !important; }
+                      [data-ogsc] .cta-alt { color: #CCD1FF !important; }
+            
+                      /* Custom Dark Mode Text Link Color */
+                      [data-ogsc] .link { color: #fdfdfd !important; }
+                      [data-ogsc] .footer a.link { color: #fdfdfd !important; }
+        </style>
+                   
+        <!--fix for Outlook bullet points-->
+        <style>
+                u + .body .glist { margin-left: 15px !important; }
+      
+                @media only screen and (max-width: 640px) {
+                u + .body .glist { margin-left: 25px !important; }
+             }
+        </style>
+        
+         <!--correct rendering of bullets in Outlook-->
+          <!--[if (gte mso 9)|(IE)]>
+          <style>
+          li {
+          margin-left:25px !important;
+          mso-special-format: bullet;
+          }
+          .forOutlook {
+          margin-left: -25px !important;
+          }
+          .Outlooksublist {
+          	margin-left: 25px !important;
+          }
+          </style>
+          <![endif]-->     
+
+        <!--correct superscripts in Outlook-->
+        <!--[if (gte mso 9)|(IE)]>
+                      <style>
+                      sup{font-size:100% !important;}
+     
+        <![endif]-->
+
+        <title>Copeland</title>
+
+
+
+    </head>
+
+    <body id="body" class="darkmode body body-fix" link="#0F3CFF" vlink="#0F3CFF">
+        <div role="article" aria-roledescription="email" aria-label="Email from Copeland" xml:lang="en" lang="en">
+            <!--hidden preheader with preh-header spacer hack-->
+            <div class="litmus-builder-preview-text" style="display:none;font-size:0px;color:transparent;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;">
+
+                Preheader text goes here &#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;&#847;&zwnj;&nbsp;&#8199;&#65279;</div>
+
+            <!--start of email-->
+            <table class="darkmode" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:100%; background: #eeeeee;">
+
+                <!--main content area-->
+                <custom name="opencounter" type="tracking"/>
+                <tr>
+                    <td class="tPad-0" align="center" valign="top" style="padding-top: 30px; padding-bottom: 30px;">
+
+                        <table class="w100p darkmode2" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:600px;background-color: #ffffff;">
+                            <tr>
+                                <td align="center" valign="top" style="padding:50px 0;">
+
+                                    <!--Header with logo-->
+                                    <!--light mode logo-->
+                                    <a href="https://www.copeland.com/en-us" target="_blank"><img class="light-img" src="https://image.mc2.copeland.com/lib/fe90137376640c7474/m/2/copeland-logo.png" width="180" height="auto" alt="Copeland" style="border:0;outline:none;display:block;color: #4a4a4a; font-family: 'Arial', Helvetica, sans-serif; text-align:center; font-weight:bold; font-size:24px; line-height:28x; text-decoration: none; padding: 0;">
+                                        <!--dark mode logo-->
+                                        <!--[if !mso]>
+        <! -->
+                                        <div class="dark-img" style="display:none; overflow:hidden; width:0px; max-height:0px; max-width:0px; line-height:0px; visibility:hidden;" align="center">
+                                            <img src="https://image.mc2.copeland.com/lib/fe90137376640c7474/m/2/copeland-logo.png" width="180" height="auto" alt="Copeland" style="border:0;outline:none;display:block;color: #4a4a4a; font-family: 'Arial', Helvetica, sans-serif; text-align:center; font-weight:bold; font-size:24px; line-height:28px; text-decoration: none; padding: 0;" border="0" />
+                                        </div>
+                                        <!--<![endif]-->
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 0 30px;">
+                                    <!--H1 headline-->
+                                    <h1 style="padding:0;font-family: 'STIX Two Text', Georgia, serif; margin: 0 30px; font-size: 32px; line-height: 42px; font-weight: normal; color: #000E57; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">(H1) Stix Two Text Bold, 32px, two lines max (65 characters)</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 0 40px;">
+                                    <!--Intro copy-->
+                                    <p class="std" style="padding:0;font-family: 'Arial', Helvetica, sans-serif; margin: 0 30px; font-size: 22px; line-height: 32px; font-weight: normal; color:#231f20; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Intro content, supporting the headline, drawing the reader down the email. Arial, 22px. Max 90 characters.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 0 72px;">
+                                    <!--CTA button-->
+                                    <a href="https://www.example.com{{utm_code}}" class="cta" style="border:1px solid #0F3CFF;transition:0.1s !important;background-color: #0F3CFF; font-size: 18px; font-family: 'Arial', Helvetica, sans-serif; font-weight:bold; text-decoration: none; padding: 14px 40px; color: #FFFEF5; display:inline-block; mso-padding-alt:0;"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:300%;mso-text-raise:30pt">&nbsp;</i><![endif]-->
+                                        <span style="mso-text-raise:15pt;"><span class="gmail-screen"><span class="gmail-difference">CALL&nbsp;TO&nbsp;ACTION</span></span></span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:300%">&nbsp;</i><![endif]-->
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding: 0 0 50px;">
+                                    <!--Full width image (no LR padding) - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <a href="https://www.example.com/{{utm_code}}" target="_blank"><img src="https://placehold.co/600x400" class="fadeimg" width="600" height="400" alt="place alt text here" style="border:0;outline:none;text-decoration:none;display:block;transition:0.3s !important;opacity:1 !important;width: 100%; max-width: 600px; height: auto; font-size: 18px; line-height: 28px; color: #0A080B;" /></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="top" style="padding: 0 30px 30px;">
+                                    <!--H2 headline-->
+                                    <h2 style="padding:0; font-family:'Arial', Helvetica, sans-serif; margin: 0;font-size: 28px; line-height: 38px; text-align: left; color: #000E57; font-weight: normal;">Secondary (H2), Arial 28px</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="top" style="padding: 0 30px 30px;">
+                                    <!--Paragraph-->
+                                    <p style="padding:0;font-family: 'Arial', Helvetica, sans-serif; margin: 0;font-size: 18px; line-height: 28px; text-align: center; color: #231f20; font-weight: normal; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">The body copy is around 400 characters with a font size of 18px. Limit text blocks to no more than six lines long with a line height of 1.5, aligned left. Keep body copy sharp and succinct but conversational. Sound human. Add paragraphs so it is easy to consume, along with bullet lists when applicable.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding: 0 30px 50px;">
+                                    <!--Unordered list-->
+                                    <ul class="glist" style="margin:0; margin-left: 25px; padding:0; font-family: 'Arial', Helvetica, sans-serif; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;" align="left" type="disc">
+                                        <li style="color: #231f20; font-size:28px; line-height:28px; text-align: left;">
+                                            <p style="padding:0;margin:0;font-size:18px; line-height:28px; color:#231f20;"><a class="link" href="https://www.examples.com{{utm_code}}" style="color: #0f3cff; text-decoration: underline; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. Donec eu libero quis nibh viverra rhoncus eget nec orci.</p>
+                                        </li>
+                                        <li style="color: #231f20; font-size:28px; line-height:28px; text-align: left; margin-top: 10px;">
+                                            <p style="padding:0;margin:0;font-size:18px; line-height:28px; color:#231f20; mso-margin-top-alt: 20px;"><a class="link" href="https://www.examples.com{{utm_code}}" style="color: #0f3cff; text-decoration: underline; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Cras ornare lacus orci</a>, dignissim auctor purus commodo eu. In venenatis lobortis gravida. </p>
+                                        </li>
+                                        <li style="color: #231f20; font-size:28px; line-height:28px; text-align: left; margin-top: 10px;">
+                                            <p style="padding:0;margin:0;font-size:18px; line-height:28px; color:#231f20; mso-margin-top-alt: 20px; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;"><a class="link" href="https://www.examples.com{{utm_code}}" style="color: #0f3cff; text-decoration: underline;">Proin facilisis est elit</a>, eget dictum felis feugiat non. Nunc felis nibh, egestas eu massa tristique, condimentum volutpat diam.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 50px;">
+                                    <!--Divider - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <hr style="border: 0; height: 1px; margin: 0; background: #999;">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 20px;">
+                                    <!--2 column - image left (normal stack). Works with the modular starter template found in Litmus Community here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td align="center" valign="top" style="font-size:0;">
+                                                <!--[if (gte mso 9)|(IE)]>
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                                <tr>
+                                  <td valign="top" style="width: 255px;">
+                            <![endif]-->
+                                                <div class="rPad-0" style="display:inline-block;vertical-align:top; padding-right: 20px;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width: 255px;">
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 30px;">
+                                                                <a href="https://www.example.com{{utm_code}}"><img class="imgFull fadeimg" src="https://placehold.co/255" alt="put alt text here" width="255" height="255" style="border:0;outline:none;text-decoration:none;display:block;transition:0.3s !important;opacity:1 !important;font-size: 18px; line-height: 28px; color: #0a080b;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            <td valign="top" style="width:20px;">
+                            </td>
+                            <td valign="top" style="width:265px;">
+                            <![endif]-->
+                                                <div style="display:inline-block;vertical-align:top;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width:265px;">
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 12px;">
+                                                                <!--H3 heading-->
+                                                                <h3 style="font-family:'Arial', Helvetica, sans-serif !important; font-weight:500; font-size:24px; line-height:34px; color:#000E57; margin:0; padding:0;">Tertiary (H3), 24px</h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 30px;">
+                                                                <!--Paragraph-->
+                                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#231f20; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper viverra sem, a dictum purus rutrum eu, consectetur adipiscing elit luctus in consequa <a href="https://www.example.com{{utm_code}}" class="link" target="_blank" style="color: #0F3CFF; text-decoration: underline;">luctus in consequa.</a></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </table>
+                            <![endif]-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 20px;">
+                                    <!--2 column - image right (reverse stack). Works with the Modular Starter Template found in Litmus Community here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td align="center" valign="top" style="font-size:0;" dir="rtl">
+                                                <!--[if (gte mso 9)|(IE)]>
+                            <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                              <tr>
+                                <td valign="top" style="width: 255px;">
+                          <![endif]-->
+                                                <div class="lPad-0" style="display:inline-block;vertical-align:top; padding-left: 20px;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width: 255px;">
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 30px;">
+                                                                <a href="https://www.example.com{{utm_code}}"><img class="imgFull fadeimg" src="https://placehold.co/255" alt="place alt text here" width="255" height="255" style="border:0;outline:none;text-decoration:none;display:block;transition:0.3s !important;opacity:1 !important;font-size: 18px; line-height: 28px; color: #0a080b;"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td valign="top" style="width:20px;">
+                          </td>
+                          <td valign="top" style="width:265px;">
+                          <![endif]-->
+                                                <div style="display:inline-block;vertical-align:top;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width:265px;">
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 12px;">
+                                                                <!--H3 heading-->
+                                                                <h3 style="font-family:'Arial', Helvetica, sans-serif !important; font-weight:500; font-size:24px; line-height:34px; color:#000E57; margin:0; padding:0;">Tertiary (H3), 24px</h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 30px;">
+                                                                <!--Paragraph-->
+                                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#0a080b; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper viverra sem, a dictum purus rutrum eu, consectetur adipiscing elit luctus in consequa <a href="https://www.example.com{{utm_code}}" class="link" target="_blank" style="color: #0F3CFF; text-decoration: underline;">luctus in consequa.</a></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </table>
+                          <![endif]-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 50px;">
+                                    <!--Callout section-->
+                                    <table class="w90p darkmode3" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:540px; background-color:#edebe6;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding: 50px 30px 30px;">
+                                                <!--H3 heading-->
+                                                <h3 style="padding:0;font-size: 24px; line-height: 28px; font-family:'Arial', Helvetica, sans-serif !important; font-weight:500 ;margin: 0; text-align: center; color: #000E57; margin-bottom: 0px;">Tertiary (H3), Arial, 24px</h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding: 0 30px 30px;">
+                                                <!--Paragraph-->
+                                                <p style="font-family: 'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#231f20; margin: 0; padding:0; text-align: center; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Give prominence to important information within a callout section. Keep content concise and limit two lines.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding:0 30px 50px;">
+                                                <!--CTA button-->
+                                                <a href="https://www.example.com{{utm_code}}" class="cta-alt" style=" border: 1px solid #0F3CFF; font-size: 18px; Font-family: 'Arial', Helvetica, sans-serif; font-weight:bold; text-decoration: none; padding: 14px 30px; color: #0F3CFF; display:inline-block; mso-padding-alt:0;"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:300%;mso-text-raise:30pt">&nbsp;</i><![endif]--><span style="mso-text-raise:15pt;">CALL&nbsp;TO&nbsp;ACTION</span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:300%">&nbsp;</i><![endif]--></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 0;">
+                                    <!--2 column - images + text - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td align="center" valign="top" style="font-size:0;">
+                                                <!--[if (gte mso 9)|(IE)]>
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                                <tr>
+                                  <td valign="top" style="width: 255px;">
+                            <![endif]-->
+                                                <div class="rPad-0" style="display:inline-block;vertical-align:top; padding-right: 20px;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 255px;">
+                                                        <tr>
+                                                            <td align="center" valign="top">
+                                                                <a href="https://www.example.com{{utm_code}}"><img class="imgFull fadeimg" src="https://placehold.co/255x199" alt="place alt text here" width="255" height="199" style="border:0;outline:none;text-decoration:none;display:block;transition:0.3s !important;opacity:1 !important;font-size: 18px; line-height: 28px; color: #0a080b;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding: 30px 0 12px;">
+                                                                <!--H3 heading-->
+                                                                <h3 style="font-family:'Arial', Helvetica, sans-serif !important; font-weight:500; font-size:24px; line-height:28px; color:#000E57; margin:0; padding-bottom:0; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Tertiary (H3), 24px</h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 50px;">
+                                                                <!--Paragraph-->
+                                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#0a080b; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;"><span style="color: #262728;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper viverra sem, a dictum purus rutrum eu, consectetur adipiscing elit.</span> <a class="link" style="color: #0f3cff; text-decoration: underline;" href="https://www.example.com{{utm_code}}" target="_blank" rel="noopener">luctus in consequa</a></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            <td valign="top" style="width:20px;">
+                            </td>
+                            <td valign="top" style="width:255px;">
+                            <![endif]-->
+                                                <div style="display:inline-block;vertical-align:top;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:255px;">
+                                                        <tr>
+                                                            <td align="center" valign="top">
+                                                                <a href="https://www.example.com{{utm_code}}"><img class="imgFull fadeimg" src="https://placehold.co/255x199" alt="place alt text here" width="255" height="199" style="border:0;outline:none;text-decoration:none;display:block;transition:0.3s !important;opacity:1 !important;font-size: 18px; line-height: 28px; color: #0a080b;"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding: 30px 0 12px;">
+                                                                <!--H3 heading-->
+                                                                <h3 style="font-family:'Arial', Helvetica, sans-serif !important; font-weight:500; font-size:24px; line-height:28px; color:#000E57; margin:0; padding:0; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Tertiary (H3), 24px</h3>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 50px;">
+                                                                <!--Paragraph-->
+                                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#0a080b; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;"><span style="color: #262728;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper viverra sem, a dictum purus rutrum eu, consectetur adipiscing elit.</span> <a class="link" style="color: #0f3cff; text-decoration: underline;" href="https://www.example.com{{utm_code}}" target="_blank" rel="noopener">luctus in consequa</a></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </table>
+                            <![endif]-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 50px;">
+                                    <!--Full width image (with padding) - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <a href="https://www.example.com/{{utm_code}}" target="_blank"><img src="https://placehold.co/540x300" class="fadeimg" width="540" height="300" alt="place alt text here" style="border:0;line-height:100%;outline:none;text-decoration:none;display:block;transition:0.3s !important;opacity:1 !important;width: 100%; max-width: 540px; height: auto;" /></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 50px;">
+                                    <!--Divider - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <hr style="border: 0; height: 1px; margin: 0; background: #999;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 0;">
+                                    <!--3 column - images + text-->
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 0;">
+                                    <!--3 column - images + text - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td align="center" valign="top" style="font-size:0;">
+                                                <!--[if (gte mso 9)|(IE)]>
+                              <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                                <tr>
+                                  <td valign="top" style="width: 160px;">
+                            <![endif]-->
+                                                <div class="rPad-0" style="display:inline-block; padding-right: 30px;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 160px;">
+                                                        <tr>
+                                                            <td align="center" valign="top">
+                                                                <img src="https://placehold.co/75" alt="place alt text here" width="75" height="75" style="border:0;outline:none;text-decoration:none;display:block;font-size: 16px; line-height: 26px; color: #0F3CFF;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" valign="top" style="padding: 20px 0 12px;">
+                                                                <!--Paragraph headline-->
+                                                                <p class="cTxt" style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:30px; color:#231f20; margin:0; padding:0; text-align: left; font-weight:bold;">Arial, bold 18px
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 50px;">
+                                                                <!--Paragraph-->
+                                                                <p class="cTxt" style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#231f20; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Proin facilisis est elit, eget dictum felis <a href="https://www.example.com{{utm_code}}" class="link" target="_blank" style="color: #0F3CFF; text-decoration: underline;">feugiat non</a>.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            <td valign="top" style="width: 30px;">
+                            </td>
+                            <td valign="top" style="width: 160px;">
+                            <![endif]-->
+                                                <div class="rPad-0" style="display:inline-block; padding-right: 30px;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 160px;">
+                                                        <tr>
+                                                            <td align="center" valign="top">
+                                                                <img src="https://placehold.co/75" alt="place alt text here" width="75" height="75" style="border:0;outline:none;text-decoration:none;display:block;font-size: 16px; line-height: 26px; color: #027979;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" valign="top" style="padding: 20px 0 12px;">
+                                                                <!--Paragraph headline-->
+                                                                <p class="cTxt" style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:30px; color:#231f20; margin:0; padding:0; text-align: left; font-weight:bold;">Arial, bold 18px
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 50px;">
+                                                                <!--Paragraph-->
+                                                                <p class="cTxt" style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#231f20; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Proin facilisis est elit, eget dictum felis <a href="https://www.example.com{{utm_code}}" class="link" target="_blank" style="color: #0F3CFF; text-decoration: underline;">feugiat non</a>.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            <td valign="top" style="width: 30px;">
+                            </td>
+                            <td valign="top" style="width: 160px;">
+                            <![endif]-->
+                                                <div style="display:inline-block;">
+                                                    <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 160px;">
+                                                        <tr>
+                                                            <td align="center" valign="top">
+                                                                <img src="https://placehold.co/75" alt="place alt text here" width="75" height="75" style="border:0;outline:none;text-decoration:none;display:block;font-size: 16px; line-height: 26px; color: #027979;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" valign="top" style="padding: 20px 0 12px;">
+                                                                <!--Paragraph headline-->
+                                                                <p class="cTxt" style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:30px; color:#231f20; margin:0; padding:0; text-align: left; font-weight: bold;">Arial, bold 18px</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" style="padding-bottom: 50px;">
+                                                                <!--Paragraph-->
+                                                                <p class="cTxt" style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#231f20; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Proin facilisis est elit, eget dictum felis <a href="https://www.example.com{{utm_code}}" class="link" target="_blank" style="color: #0F3CFF; text-decoration: underline;">feugiat non</a>.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </table>
+                            <![endif]-->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 50px;">
+                                    <!--Divider - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <hr style="border: 0; height: 1px; margin: 0; background: #999;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" valign="top" style="padding: 0 30px 30px;">
+                                    <!--H2 headline - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <h2 style="padding:0;font-family:'Arial', Helvetica, sans-serif; margin: 0;font-size: 28px; line-height: 38px; text-align: left; color: #000E57; font-weight: 400; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Secondary (H2), Arial, 28px</h2>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" valign="top" style="padding: 0 30px 20px;">
+                                    <!--Icon list - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td align="left" valign="top" style="padding: 0 30px 30px 0;">
+                                                <img src="https://placehold.co/75" alt="place alt text here" width="75" height="75" style="border:0;outline:none;text-decoration:none;display:block;font-size: 16px; line-height: 26px; color: #0F3CFF;">
+                                            </td>
+                                            <td align="left" valign="top" style="padding: 0 0 30px;">
+                                                <!--Paragraph-->
+                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#0a080b; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="https://www.example.com{{utm_code}}" class="link" target="_blank" style="color: #0F3CFF; text-decoration: underline;">Donec eu libero quis</a> nibh viverra rhoncus eget nec orci.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" valign="top" style="padding: 0 30px 30px 0;">
+                                                <img src="https://placehold.co/75" alt="place alt text here" width="75" height="75" style="border:0;outline:none;text-decoration:none;display:block;font-size: 16px; line-height: 26px; color: #0F3CFF;">
+                                            </td>
+                                            <td align="left" valign="top" style="padding: 0 0 30px;">
+                                                <!--Paragraph-->
+                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#0a080b; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="https://www.example.com{{utm_code}}" class="link" target="_blank" style="color: #0F3CFF; text-decoration: underline;">Donec eu libero quis</a> nibh viverra rhoncus eget nec orci.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" valign="top" style="padding: 0 30px 30px 0;">
+                                                <img src="https://placehold.co/75" alt="place alt text here" width="75" height="75" style="border:0;outline:none;text-decoration:none;display:block;font-size: 16px; line-height: 26px; color: #0F3CFF;">
+                                            </td>
+                                            <td align="left" valign="top" style="padding: 0 0 30px;">
+                                                <!--Paragraph-->
+                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#0a080b; margin: 0; padding:0; text-align: left; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="https://www.example.com{{utm_code}}" class="link" target="_blank" style="color: #0F3CFF; text-decoration: underline;">Donec eu libero quis</a> nibh viverra rhoncus eget nec orci.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+
+
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 50px;">
+                                    <!--Divider-->
+                                    <hr style="border: 0; height: 1px; margin: 0; background: #999;">
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 50px;">
+                                    <!--Experience rating-->
+                                    <table class="w90p darkmode3" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:540px; background-color:#CCD1FF;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding: 50px 30px 30px;">
+                                                <!--H2 heading-->
+                                                <h2 style="padding:0;font-family:'Arial', Helvetica, sans-serif; margin: 0;font-size: 28px; line-height: 38px; text-align: center; color: #000E57; font-weight: 400;">Secondary (H2), Arial, 28px</h2>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding: 0 30px 30px;">
+                                                <!--Paragraph-->
+                                                <p style="font-family: 'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#231f20; margin: 0; padding:0; text-align: center; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;">Click on the number of stars you would like to give us for your recent purchasing experience:</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" dir="rtl" style="padding:0 0 50px;">
+                                                <p class="star" style="font-family: 'Arial', Helvetica, sans-serif; line-height:28px; color:#231f20; margin:0; padding:0;">
+                                                    <!--Fifth Star-->
+                                                    <a href="http://www.example.com" style="font-size: 60px; mso-ansi-font-size: 70px; color: #0F3CFF; text-decoration: none;">&#9733;</a>
+                                                    <!--Fourth Star-->
+                                                    <a href="http://www.example.com" style="font-size: 60px; mso-ansi-font-size: 70px; color: #0F3CFF; text-decoration: none;">&nbsp;&#9733;</a>
+                                                    <!--Third Star-->
+                                                    <a href="http://www.example.com" style="font-size: 60px; mso-ansi-font-size: 70px; color: #0F3CFF; text-decoration: none;">&nbsp;&#9733;</a>
+                                                    <!--Second Star-->
+                                                    <a href="http://www.example.com" style="font-size: 60px; mso-ansi-font-size: 70px; color: #0F3CFF; text-decoration: none;">&nbsp;&#9733;</a>
+                                                    <!--First Star-->
+                                                    <a href="http://www.example.com" style="font-size: 60px; mso-ansi-font-size: 70px; color: #0F3CFF; text-decoration: none;">&nbsp;&#9733;</a>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td align="center" valign="top" style="padding:0 30px 50px;">
+                                    <!--1 column testimonial/speaker - works with the Modular Starter Template found here: https://litmus.com/community/templates/40-modular-starter-template-->
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                        <tr>
+                                            <td align="center" valign="top" style="padding: 0 0 30px;">
+                                                <!--testimonial image-->
+                                                <img src="https://placehold.co/150" alt="headshot" width="150" height="150" style="border:0;outline:none;text-decoration:none;display:block;font-size: 16px; line-height: 26px; color: #231f20;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="padding: 0 0 30px;">
+                                                <!--Paragraph-->
+                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#231f20; margin: 0; padding:0; text-align: center; -moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;mso-hyphenate:none;"><em>&ldquo;Quisque accumsan, enim sed consequat mattis, nulla magna aliquam tortor, sed ornare sem mauris ut quam. Maecenas ut dolor condimentum, viverra mi eget, rhoncus risus.&rdquo;</em></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top">
+                                                <!--Paragraph-->
+                                                <p style="font-family:'Arial', Helvetica, sans-serif; font-size:18px; line-height:28px; color:#231f20; margin: 0; padding:0; text-align: center; text-transform: uppercase;">NAME, POSITION, COMPANY</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td align="center" valign="top" style="padding: 0 30px 50px;">
+                                    <!--Poll-->
+                                    <h3 style="font-family:'Arial', Helvetica, sans-serif !important; font-weight:500; font-size:24px; line-height:28px; color:#000E57; margin-bottom: 30px;">Tertiary (H3), 24px</h3>
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;border-collapse:collapse !important;">
+                                        <tr>
+                                            <td width="55" align="center" valign="middle">
+                                                <a href="https://img.kickdyn.com/clickimgpoll.ashx"><img src="https://placehold.co/74x124" width="74" height="124" border="0" alt="alt text here" style="border:0;line-height:100%;outline:none;text-decoration:none;display:block;" /></a>
+                                            </td>
+                                            <td width="50" style="font-size: 1px;">&nbsp;</td>
+                                            <td width="55" align="center" valign="middle">
+                                                <a href="https://img.kickdyn.com/clickimgpoll.ashx"><img src="https://placehold.co/74x124" width="74" height="124" border="0" alt="alt text here" style="border:0;line-height:100%;outline:none;text-decoration:none;display:block;" /></a>
+                                            </td>
+                                            <td width="50" style="font-size: 1px;">&nbsp;</td>
+                                            <td width="55" align="center" valign="middle" style="vertical-align:middle;">
+                                                <a href="https://img.kickdyn.com/clickimgpoll.ashx"><img src="https://placehold.co/74x124" width="74" height="124" border="0" alt="alt text here" style="border:0;line-height:100%;outline:none;text-decoration:none;display:block;" /></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="darkmode footer" align="center" valign="top" style="padding:40px 30px; background: #231f20;">
+                                    <!--Footer-->
+                                    <a href="https://www.copeland.com/en-us" alias=" COPELAND Footer Logo "><img src="https://image.mc2.copeland.com/lib/fe90137376640c7474/m/2/copelend-white.png" width="170" alt=" COPELAND " border="0" style="border:0;line-height:100%;outline:none;text-decoration:none;display:block;color:#EFEFEF;"></a>
+                                    <div>&nbsp;</div>
+                                    <p style="padding:0;margin:0;font-family: 'Arial', Helvetica, sans-serif;font-size:14px;line-height:24px;mso-line-height-rule:exactly;color:#FFFEF5;margin-bottom:30px;">
+                                        8100 West Florissant Ave.<br>
+                                        St Louis, MO 63136-9022<br>@2024 Copeland LP. All rights reserved.
+                                    </p>
+                                    <p style="padding:0;margin:0;font-family: 'Arial', Helvetica, sans-serif;font-size:14px;line-height:22px;mso-line-height-rule:exactly;color:#FFFEF5;margin-bottom:30px;">
+                                        You receive this email because you are subscribed to receive communications from Copeland HVACR Technologies at <span class=eloquaemail>EmailAddress</span>
+                                    </p>
+                                    <a href="https://app.go.copeland.com/e/f2?elqFormName=Blindform-Unsubscribe-HVACR&elqSiteID=1409029440&emailAddress=~~eloqua..type--emailfield..syntax--EmailAddress..innerText--EmailAddress..encodeFor--url~~&hvacrStatus=Unsubscribe&source=email-footer-en&rdr=https://lp.copeland.com/hvacr-unsubscribe-redirect?email=~~eloqua..type--emailfield..syntax--EmailAddress..innerText--EmailAddress..encodeFor--url~~&elqTrackId=4774031f28f24129b32bf5b04e3f6f58" class="link" target="_blank" style="color: #FFFEF5; font-family: 'Arial', Helvetica, sans-serif;font-size:14px;line-height:20px; text-decoration: underline;">Unsubscribe</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://lp.copeland.com/hvacr-technologies-preference-center" class="link" target="_blank" style="color: #FFFEF5; font-family: 'Arial', Helvetica, sans-serif;font-size:14px;line-height:20px; text-decoration: underline;">Manage&nbsp;Preferences</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.copeland.com/en-us/privacy-notice" class="link" target="_blank" style="color: #FFFEF5; font-family: 'Arial', Helvetica, sans-serif;font-size:14px;line-height:20px; text-decoration: underline;">Privacy&nbsp;Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.copeland.com/en-us/terms-of-use" class="link" target="_blank" style="color: #FFFEF5; font-family: 'Arial', Helvetica, sans-serif;font-size:14px;line-height:20px; text-decoration: underline;">Terms&nbsp;of&nbsp;Use</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                </td>
+                            </tr>
+
+
+
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--analytics go below here-->
+    </body>
+
+</html>
